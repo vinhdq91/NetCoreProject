@@ -1,0 +1,14 @@
+﻿@page "{handler?}"
+@model NetCoreProject1.Content.MultiActionsModel
+@{
+    ViewData["Title"] = "Multiaction";
+}
+
+<form method="post">
+    <button asp-page-handler="register">Register Now</button>
+    <button asp-page-handler="requestinfo">Request Info</button>
+</form>
+<a class="btn btn primary" asp-page-handler="clear">Clear Now</a>
+<a class="btn btn primary" asp-page-handler="reset">Reset Now</a>
+<hr/>
+<h3>@Model.Message</h3>

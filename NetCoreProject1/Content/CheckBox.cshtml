@@ -1,0 +1,28 @@
+﻿@page
+@model NetCoreProject1.Content.CheckBoxModel
+@{
+}
+@if (Request.Method.ToUpper() == "GET")
+{
+    <form method="post">
+        @foreach (string item in Model.ListLanguage)
+        {
+            <div class="custom-control">
+                <input type="checkbox" class="custom-checkbox" name="languages" id="@item" value="@item" />
+                <label class="custom-control-label" for="@item">@item</label>
+            </div>
+        }
+
+        <button type="submit">Submit</button>
+    </form>
+}
+else if (Request.Method.ToUpper() == "POST")
+{
+    <h3>You have choosen</h3>
+    <ul>
+        @foreach (string item in Model.Language)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}

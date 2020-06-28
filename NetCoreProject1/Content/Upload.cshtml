@@ -1,0 +1,24 @@
+﻿@page
+@model NetCoreProject1.Content.UploadModel
+@{
+}
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <button type="submit" class="btn btn-info">Submit</button>
+</form>
+
+@if (Request.Method.ToUpper() == "POST")
+{
+    @if (Model.Success)
+    {
+        <h3>The file @ViewData["file"] has been uploaded successfully !</h3>
+    }
+    else
+    {
+        <h3>The file @ViewData["file"] has been uploaded failed !</h3>
+    }
+
+    if (!string.IsNullOrEmpty(Model.FilePath)){
+        <img src="@Model.FilePath">
+    }
+}

@@ -1,0 +1,16 @@
+﻿@page
+@using BookMan.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <ul>
+        @foreach (Book item in Model.Books)
+        {
+            <li><bold>Title:</bold> @item.Title</li>
+            <li><a href="/book/@item.Id">Check detail</a></li>
+        }
+    </ul>
+</div>

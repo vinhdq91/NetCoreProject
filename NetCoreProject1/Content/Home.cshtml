@@ -1,0 +1,42 @@
+﻿@page
+@model NetCoreProject1.Content.TestChangeDirectory.IndexModel
+@{
+    void SayHello(string name)
+    {
+        <b>@name</b>
+        <text>@name</text>
+    }
+
+    double Calculate(double a, double b)
+    {
+        return (a * b) + (a / b);
+    }
+}
+
+<h5>This is default page from Content Directory</h5>
+<hr/>
+
+<div>
+    Please say hello to @{SayHello("Corona");}
+</div>
+
+<div>
+    The result of calculation between 5,5 and 3,5 is: @Calculate(5.5, 3.5)
+</div>
+<hr/>
+<div>
+    @Model.SayHello();
+</div>
+<div>
+    @Model.SayGoodbye();
+</div>
+
+<a class="btn btn-primary" href="/MultiForms">MultiForms</a>
+<a class="btn btn-primary" href="/MultiActions">MultiActions</a>
+<a class="btn btn-primary" href="/Solve/2_-3_-4">Equation</a>
+<a class="btn btn-primary" href="/Form">Form</a>
+<a class="btn btn-primary" href="/Upload">Upload</a>
+<a class="btn btn-primary" href="/CheckBox">Checkbox</a>
+<a class="btn btn-primary" href="/FormBinding">Form Binding</a>
+<a class="btn btn-primary" href="/register/Donald%20Trump/trump@gmail.com/29">Route Binding</a>
+<a class="btn btn-primary" href="/ObjectBinding">Object Binding</a>

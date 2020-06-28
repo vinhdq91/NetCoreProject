@@ -1,0 +1,26 @@
+﻿@page
+@model NetCoreProject1.Content.MultiFormsModel
+@{
+}
+
+<div class="row">
+    <div class="col-lg-1">
+        <form asp-page-handler="edit" method="post">
+            <button class="btn btn-primary">Edit</button>
+            <input type="hidden" name="id" value="10" />  @*Use input to pass parameter id*@
+        </form>
+    </div>
+    <div class="col-lg-1">
+        <form asp-page-handler="delete" method="post">
+            <button class="btn btn-primary">Delete</button>
+            <input type="hidden" name="id" value="15" /> @*Use input to pass parameter id*@
+        </form>
+    </div>
+    <div class="col-lg-1">
+        <form asp-page-handler="view" asp-route-id="20" method="post"> @*Use asp-route-id to pass parameter id*@
+            <button class="btn btn-primary">View</button>
+        </form>
+    </div>
+</div>
+
+<h2>@Model.Message</h2>

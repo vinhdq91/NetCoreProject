@@ -1,0 +1,19 @@
+﻿@page
+@model NetCoreProject1.Content.FormBindingModel
+@{
+}
+
+@if (Request.Method == "GET")
+{
+    <form method="post" class="border">
+        <p class="h4 mb-4">Subscribe</p>
+        <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" />
+        <input type="number" class="form-control" name="age" id="age" placeholder="Age" />
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+}
+else if (Request.Method == "POST")
+{
+    <h3>@Model.Message</h3>
+}
