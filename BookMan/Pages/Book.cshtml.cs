@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookMan.Enums;
 using BookMan.Models;
 using BookMan.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -14,36 +15,55 @@ namespace BookMan
         private readonly IRepository _repository;
         public HashSet<Book> Books => _repository.Books;
         public Book Book { get; set; } = new Book();
+        public int ActionType { get; set; }
         public BookModel(IRepository repository)
         {
             _repository = repository;
         }
         public void OnGet(int id)
         {
-            Book = _repository.Detail(id);
+            Book = _repository.GetBookById(id);
+        }
+
+        public void OnGetUpdate(int id)
+        {
+            ActionType = (int)ActionTypeEnum.Update;
+            Book = _repository.GetBookById(id);
+            ViewData["Title"] = Book != null ? $"Edit book {Book.Title} ?" : "Book not found.";
         }
 
         public IActionResult OnPostUpdate(Book book)
         {
-            if (_repository.Detail(book.Id) != null)
+            if (book != null)
             {
-                _repository.Detail(book.Id).Title = book.Title;
-                _repository.Detail(book.Id).Category = book.Category;
-                _repository.Detail(book.Id).Authors = book.Authors;
-                _repository.Detail(book.Id).Publisher = book.Publisher;
-                _repository.Detail(book.Id).Year = book.Year;
-                _repository.Detail(book.Id).Price = book.Price;
-                _repository.Detail(book.Id).Description = book.Description;
+                Book bookInDb = _repository.GetBookById(book.Id);
+                if (bookInDb != null)
+                {
+                    bookInDb.Title = book.Title;
+                    bookInDb.Category = book.Category;
+                    bookInDb.Authors = book.Authors;
+                    bookInDb.Publisher = book.Publisher;
+                    bookInDb.Year = book.Year;
+                    bookInDb.Price = book.Price;
+                    bookInDb.Description = book.Description;
+                }
             }
+            TempData["Message"] = $"Update book {_repository.GetBookById(book.Id).Title} successfully !";
             return Redirect("/");
         }
 
-        public IActionResult OnPostDelete(int id)
+        public void OnGetDelete(int id)
         {
-            if (_repository.Detail(id) != null)
-            {
-                _repository.Books.Remove(_repository.Detail(id));
-            }
+            ActionType = (int)ActionTypeEnum.Delete;
+            Book = _repository.GetBookById(id);
+            ViewData["Title"] = Book != null ? $"Are you sure deleting the book : {Book.Id} ?" : "Book not found.";
+        }
+
+        public IActionResult OnGetConfirmDelete(int id)
+        {
+            string title = _repository.GetBookById(id).Title;
+            _repository.Books.Remove(_repository.GetBookById(id));
+            TempData["Message"] = $"Delete book {title} successfully !";
             return Redirect("/");
         }
     }

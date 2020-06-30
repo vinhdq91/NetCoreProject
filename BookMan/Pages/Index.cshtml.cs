@@ -16,6 +16,7 @@ namespace BookMan.Pages
         private readonly IRepository _repository;
         public HashSet<Book> Books => _repository.Books;
         public int Count => _repository.Books.Count;
+        public string Message { get; set; } = null;
         public IndexModel(ILogger<IndexModel> logger, IRepository repository)
         {
             _logger = logger;
@@ -24,7 +25,7 @@ namespace BookMan.Pages
 
         public void OnGet()
         {
-
+            Message = TempData["Message"] != null ? TempData["Message"].ToString() : null;
         }
     }
 }

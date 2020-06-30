@@ -3,14 +3,43 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    int index = 0;
 }
-
 <div>
-    <ul>
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <h3>@Model.Message</h3>
+    }
+    <table>
+        <tr>
+            <th style="width: 30px">#</th>
+            <th style="width: 200px">Title</th>
+            <th style="width: 10px">Category</th>
+            <th style="width: 10px">Price</th>
+            <th style="width: 100px">Authors</th>
+            <th style="width: 10px">Year</th>
+            <th style="width: 10px">Publisher</th>
+            <th style="width: 80px">Description</th>
+            <th style="width: 300px">Action</th>
+        </tr>
         @foreach (Book item in Model.Books)
         {
-            <li><bold>Title:</bold> @item.Title</li>
-            <li><a href="/book/@item.Id">Check detail</a></li>
+            <tr>
+                <td>@(++index)</td>
+                <td>@item.Title</td>
+                <td>@item.Category</td>
+                <td>@item.Price</td>
+                <td>@item.Authors</td>
+                <td>@item.Year</td>
+                <td>@item.Publisher</td>
+                <td>@item.Description</td>
+                <td>
+                    <a class="btn btn-primary" href="/book/@item.Id">Detail</a>
+                    <a class="btn btn-primary" href="/book/@item.Id?handler=update">Update</a>
+                    <a class="btn btn-primary" href="/book/@item.Id?handler=delete">Delete</a>
+                </td>
+            </tr>
         }
-    </ul>
+    </table>
 </div>
+

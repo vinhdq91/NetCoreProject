@@ -9,6 +9,6 @@ namespace BookMan.Repository
     public interface IRepository
     {
         public HashSet<Book> Books { get; set; }
-        public Book Detail(int bookId);
+        public Book GetBookById(int bookId);
     }
 }

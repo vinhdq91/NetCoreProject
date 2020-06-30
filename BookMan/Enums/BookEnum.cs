@@ -13,4 +13,12 @@ namespace BookMan.Enums
         Novel = 4,
         Comic = 5
     }
+
+    public enum ActionTypeEnum
+    {
+        Detail = 1,
+        Update = 2,
+        Delete = 3,
+        Create = 4
+    }
 }

@@ -17,6 +17,6 @@ namespace BookMan.Repository
             new Book {Id = 4, Title = "ASP.NET Core quick course",Publisher = "Linda",Authors = "George Bush", Price = 80, Category = Enum.GetName(typeof(CategoryEnum), 1), Description = "This book is most expensive"},
             new Book {Id = 5, Title = "ASP.NET Core Video Course",Publisher = "Linda", Authors = "Vladimir Putin", Price = 30, Category = Enum.GetName(typeof(CategoryEnum), 1)},
         };
-        public Book Detail(int id) => Books.SingleOrDefault(b => b.Id == id);
+        public Book GetBookById(int id) => Books.SingleOrDefault(b => b.Id == id);
     }
 }

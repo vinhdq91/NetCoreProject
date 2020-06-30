@@ -1,50 +1,87 @@
 ﻿@page "{id:int?}"
 @using BookMan.Models;
+@using BookMan.Enums;
 @model BookMan.BookModel
 @{
     ViewData["Title"] = "Book";
-    Book book = @Model.Book;
+    Book book = Model.Book;
+}
+
+@switch (Model.ActionType)
+{
+    case (int)ActionTypeEnum.Detail:
+        break;
+    case (int)ActionTypeEnum.Update:
+        if (book != null)
+        {
+            await form("update");
+        }
+        break;
+    case (int)ActionTypeEnum.Delete:
+        if (book != null)
+        {
+            <p class="text-danger text-center">Are you sure deleting this book ?</p>
+            <a class="btn btn-danger btn-block mb-2" href="/book/@book.Id?handler=confirmdelete">Delete</a>
+        }
+        <a class="btn btn-info mb-2" href="/">Return to homepage</a>
+        break;
+    case (int)ActionTypeEnum.Create:
+        if (book != null)
+        {
+
+        }
+        break;
 }
 
 <h1>Book Detail</h1>
-<hr/>
-<div>
-    <ul>      
-        <li>
-            <label class="col-form-label">Title</label> 
-            <input class="form-control" value=@book.Title name="title">
-        </li>
-        <li>
-            <label class="col-form-label">Category</label>
-            <input class="form-control" value=@book.Category name="category">
-        </li>
-        <li>
-            <label class="col-form-label">Authors</label>
-            <input class="form-control" value=@book.Authors name="authors">
-        </li>
-        <li>
-            <label class="col-form-label">Price</label>
-            <input class="form-control" value=@book.Price name="price">
-        </li>
-        <li>
-            <label class="col-form-label">Publisher</label>
-            <input class="form-control" value=@book.Publisher name="publisher">
-        </li>
-        <li>
-            <label class="col-form-label">Year</label>
-            <input class="form-control" value=@book.Year name="year">
-        </li>
-        <li>
-            <label class="col-form-label">Description</label>
-            <input class="form-control" value=@book.Description name="description">
-        </li>
-    </ul>
-    <div>
-        <form method="post" asp-page-handler="update" asp-route-data="@book">
-            <button type="submit" class="btn btn-primary">Update</button>
+<hr />
+@{
+    async Task template()
+    {
+        <div>
+            <ul>
+                <li>
+                    <label class="col-form-label">Title</label>
+                    <input class="form-control" value=@book.Title name="title">
+                </li>
+                <li>
+                    <label class="col-form-label">Category</label>
+                    <input class="form-control" value=@book.Category name="category">
+                </li>
+                <li>
+                    <label class="col-form-label">Authors</label>
+                    <input class="form-control" value=@book.Authors name="authors">
+                </li>
+                <li>
+                    <label class="col-form-label">Price</label>
+                    <input class="form-control" value=@book.Price name="price">
+                </li>
+                <li>
+                    <label class="col-form-label">Publisher</label>
+                    <input class="form-control" value=@book.Publisher name="publisher">
+                </li>
+                <li>
+                    <label class="col-form-label">Year</label>
+                    <input class="form-control" value=@book.Year name="year">
+                </li>
+                <li>
+                    <label class="col-form-label">Description</label>
+                    <input class="form-control" value=@book.Description name="description">
+                </li>
+            </ul>
+        </div>
+    }
+
+}
+
+@{
+    async Task form(string handler = "create")
+    {
+        <form method="post" href="?handler=@handler">
+            @{
+                await template();
+            }
+            <button type="submit">@handler.ToUpper()</button>
         </form>
-        <form method="post" asp-page-handler="delete" asp-route-id="@book.Id">
-            <button type="submit" class="btn btn-primary">Delete</button>
-        </form>
-    </div>
-</div>
+    }
+}
