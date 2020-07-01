@@ -34,12 +34,15 @@
                 <td>@item.Publisher</td>
                 <td>@item.Description</td>
                 <td>
-                    <a class="btn btn-primary" href="/book/@item.Id">Detail</a>
-                    <a class="btn btn-primary" href="/book/@item.Id?handler=update">Update</a>
-                    <a class="btn btn-primary" href="/book/@item.Id?handler=delete">Delete</a>
+                    <a class="btn btn-info" href="/book/@item.Id">Detail</a>
+                    <a class="btn btn-success" href="/book/@item.Id?handler=update">Update</a>
+                    <a class="btn btn-danger" href="/book/@item.Id?handler=delete">Delete</a>
                 </td>
             </tr>
         }
     </table>
+    <div class="">
+        <a class="btn btn-primary" href="/book/0?handler=create">Create</a>
+    </div>
 </div>
 

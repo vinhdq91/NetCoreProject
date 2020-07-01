@@ -10,6 +10,10 @@
 @switch (Model.ActionType)
 {
     case (int)ActionTypeEnum.Detail:
+        if (book != null)
+        {
+            await template();
+        }
         break;
     case (int)ActionTypeEnum.Update:
         if (book != null)
@@ -28,7 +32,7 @@
     case (int)ActionTypeEnum.Create:
         if (book != null)
         {
-
+            await form("create");
         }
         break;
 }
@@ -45,8 +49,14 @@
                     <input class="form-control" value=@book.Title name="title">
                 </li>
                 <li>
-                    <label class="col-form-label">Category</label>
-                    <input class="form-control" value=@book.Category name="category">
+                    <label class="col-form-label">Category</label><br />
+                    <select id="select-category" value="@book.Category" class="chosen-select form-control" name="category">
+                        <option value="@Enum.GetName(typeof(CategoryEnum), (int)CategoryEnum.Comic)">Comic</option>
+                        <option value="@Enum.GetName(typeof(CategoryEnum), (int)CategoryEnum.Fiction)">Fiction</option>
+                        <option value="@Enum.GetName(typeof(CategoryEnum), (int)CategoryEnum.NonFiction)">NonFiction</option>
+                        <option value="@Enum.GetName(typeof(CategoryEnum), (int)CategoryEnum.SelfHelp)">SelfHelp</option>
+                        <option value="@Enum.GetName(typeof(CategoryEnum), (int)CategoryEnum.Novel)">Novel</option>
+                    </select>
                 </li>
                 <li>
                     <label class="col-form-label">Authors</label>
@@ -85,3 +95,17 @@
         </form>
     }
 }
+<link rel="stylesheet" href="~/lib/chosen/chosen.css" />
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/chosen/chosen.jquery.min.js"></script>
+<script>
+    $(".chosen-select").chosen({
+        allow_single_deselect: true,
+        width: '50%',
+        no_result_text: "Not found."
+    });
+
+    // Set default value for select box using chosen
+    $(".chosen-select").val("@book.Category").trigger('change');
+    $('.chosen-select').trigger('chosen:updated');
+</script>
