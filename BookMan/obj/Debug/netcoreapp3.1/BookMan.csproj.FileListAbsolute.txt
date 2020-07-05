@@ -779,3 +779,4 @@ C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3
 C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3.1\BookMan.dll
 C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3.1\BookMan.pdb
 C:\Users\Administrator\source\repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3.1\BookMan.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\NetCoreProject\BookMan\bin\Debug\netcoreapp3.1\libman.json

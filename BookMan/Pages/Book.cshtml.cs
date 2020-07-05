@@ -20,11 +20,34 @@ namespace BookMan
         {
             _repository = repository;
         }
+
+        // Detail
         public void OnGet(int id)
         {
+            ActionType = (int)ActionTypeEnum.Detail;
             Book = _repository.GetBookById(id);
         }
 
+        // Create
+        public void OnGetCreate()
+        {
+            ActionType = (int)ActionTypeEnum.Create;
+            ViewData["Title"] = "Create a book";
+        }
+
+        public IActionResult OnPostCreate(Book book)
+        {
+            if (book != null)
+            {
+                int id = _repository.Books.OrderByDescending(x => x.Id).ToList()[0].Id + 1;
+                book.Id = id;
+                _repository.Books.Add(book);
+            }
+            TempData["Message"] = "Create book successfully !";
+            return Redirect("/");
+        }
+
+        // Update
         public void OnGetUpdate(int id)
         {
             ActionType = (int)ActionTypeEnum.Update;
@@ -52,6 +75,8 @@ namespace BookMan
             return Redirect("/");
         }
 
+
+        // Delete
         public void OnGetDelete(int id)
         {
             ActionType = (int)ActionTypeEnum.Delete;

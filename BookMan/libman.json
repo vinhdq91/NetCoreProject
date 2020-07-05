@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "chosen@1.8.7",
+      "destination": "wwwroot/lib/chosen/",
+      "files": [
+        "chosen.jquery.min.js",
+        "chosen.jquery.js",
+        "chosen.min.css",
+        "chosen.css",
+        "chosen-sprite@2x.png",
+        "chosen-sprite.png"
+      ]
+    }
+  ]
+}
