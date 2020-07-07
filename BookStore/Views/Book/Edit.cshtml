@@ -1,0 +1,75 @@
+﻿@using BookStore.Models
+@using BookStore.Enums
+@model BookModel
+@{
+    ViewData["Title"] = "Edit";
+    List<SelectListItem> selectCategory = new List<SelectListItem>()
+    {
+        new SelectListItem(){ Text = CategoryEnum.Fiction.ToString(), Value = ((int)CategoryEnum.Fiction).ToString() },
+        new SelectListItem(){ Text = CategoryEnum.NonFiction.ToString(), Value = ((int)CategoryEnum.NonFiction).ToString() },
+        new SelectListItem(){ Text = CategoryEnum.Novel.ToString(), Value = ((int)CategoryEnum.Novel).ToString() },
+        new SelectListItem(){ Text = CategoryEnum.Comic.ToString(), Value = ((int)CategoryEnum.Comic).ToString() },
+        new SelectListItem(){ Text = CategoryEnum.SelfHelp.ToString(), Value = ((int)CategoryEnum.SelfHelp).ToString() },
+        new SelectListItem(){ Text = CategoryEnum.Education.ToString(), Value = ((int)CategoryEnum.Education).ToString() }
+    };
+}
+
+<h1>Edit</h1>
+
+<form class="form-group" href="Edit" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Name</label>
+                <input type="text" class="form-control" name="Name" value="@Model.Name" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label">Category</label>
+                @Html.DropDownListFor(model => Model.CategoryId, selectCategory, Model.CategoryName, new { @name = "CategoryId", @class = "form-control chosen-select" })
+            </div>
+            <div class="form-group">
+                <label class="col-form-label">Author</label>
+                <input type="text" class="form-control" name="Author" value="@Model.Author" />
+                <span asp-validation-for="Author" class="text-danger small"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label">Publisher</label>
+                <input type="text" class="form-control" name="Publisher" value="@Model.Publisher" />
+            </div>
+            <div class="form-group">
+                <label class="col-form-label">Published Date</label>
+                <input type="text" class="form-control" name="PublishedDate" value="@Model.PublishedDate" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Description</label>
+                <input type="text" class="form-control" name="Description" value="@Model.Description" />
+            </div>
+            <div class="form-group">
+                <input type="file" name="file" />
+                <input type="hidden" asp-for="DataFile" />
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <button type="submit" class="btn btn-primary">Edit</button>
+        </div>
+    </div>
+</form>
+
+<link rel="stylesheet" href="~/lib/chosen/chosen.min.css" />
+<script src="~/lib/jquery/jquery.min.js"></script>
+<script src="~/lib/chosen/chosen.jquery.min.js"></script>
+<script>
+    $(".chosen-select").chosen({
+        allow_single_deselect: true,
+        width: '50%',
+        no_result_text: "Not found."
+    });
+
+    // Set default value for select box using chosen
+    $(".chosen-select").val("@Model.CategoryId").trigger("change");
+    $(".chosen-select").trigger("chosen:updated");
+</script>

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Models;
+using BookStore.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +19,7 @@ namespace BookStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton(typeof(IRepository<BookModel>), typeof(BookRepository));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,15 +30,21 @@ namespace BookStore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseRouting();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
+                //endpoints.MapGet("/", async context =>
+                //{
                     //await context.Response.WriteAsync("Hello World!");
-                });
-                endpoints.MapControllerRoute("default", "{controller=Home}", "{action=Index}", "{id?}");
+                //});
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                #region Book Route Collection
+                //endpoints.MapControllerRoute("BookDetail", "{controller=Book}/{action=Detail}/{id}");
+                #endregion
             });
         }
     }
