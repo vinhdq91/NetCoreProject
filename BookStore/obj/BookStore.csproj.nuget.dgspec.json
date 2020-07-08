@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\NetCoreProject\\BookStore\\BookStore.csproj": {}
+    "D:\\.Net Core Project\\NetCoreProject1\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\NetCoreProject\\BookStore\\BookStore.csproj": {
+    "D:\\.Net Core Project\\NetCoreProject1\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\NetCoreProject\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "D:\\.Net Core Project\\NetCoreProject1\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\NetCoreProject\\BookStore\\BookStore.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\NetCoreProject\\BookStore\\obj\\",
+        "projectPath": "D:\\.Net Core Project\\NetCoreProject1\\BookStore\\BookStore.csproj",
+        "packagesPath": "C:\\Users\\Vinh\\.nuget\\packages\\",
+        "outputPath": "D:\\.Net Core Project\\NetCoreProject1\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\PROGRAM FILES\\DOTNET\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -371,3 +371,4 @@ C:\Users\Administrator\Source\Repos\NetCoreProject\NetCoreProject1\obj\Debug\net
 C:\Users\Administrator\Source\Repos\NetCoreProject\NetCoreProject1\obj\Debug\netcoreapp3.1\NetCoreProject1.dll
 C:\Users\Administrator\Source\Repos\NetCoreProject\NetCoreProject1\obj\Debug\netcoreapp3.1\NetCoreProject1.pdb
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreProject1\obj\Debug\netcoreapp3.1\NetCoreProject1.csprojAssemblyReference.cache
+D:\.Net Core Project\NetCoreProject1\NetCoreProject1\obj\Debug\netcoreapp3.1\NetCoreProject1.csprojAssemblyReference.cache

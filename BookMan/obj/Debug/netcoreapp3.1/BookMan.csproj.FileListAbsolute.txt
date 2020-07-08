@@ -383,7 +383,6 @@ D:\.Net Core Project\NetCoreProject1\BookMan\bin\Debug\netcoreapp3.1\zh-Hant\Mic
 D:\.Net Core Project\NetCoreProject1\BookMan\obj\Debug\netcoreapp3.1\BookMan.MvcApplicationPartsAssemblyInfo.cs
 D:\.Net Core Project\NetCoreProject1\BookMan\obj\Debug\netcoreapp3.1\BookMan.MvcApplicationPartsAssemblyInfo.cache
 D:\.Net Core Project\NetCoreProject1\BookMan\obj\Debug\netcoreapp3.1\Razor\Pages\Book.cshtml.g.cs
-D:\.Net Core Project\NetCoreProject1\BookMan\obj\Debug\netcoreapp3.1\BookMan.csprojAssemblyReference.cache
 C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -780,3 +779,5 @@ C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3
 C:\Users\Administrator\Source\Repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3.1\BookMan.pdb
 C:\Users\Administrator\source\repos\NetCoreProject\BookMan\obj\Debug\netcoreapp3.1\BookMan.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\NetCoreProject\BookMan\bin\Debug\netcoreapp3.1\libman.json
+D:\.Net Core Project\NetCoreProject1\BookMan\bin\Debug\netcoreapp3.1\libman.json
+D:\.Net Core Project\NetCoreProject1\BookMan\obj\Debug\netcoreapp3.1\BookMan.csprojAssemblyReference.cache

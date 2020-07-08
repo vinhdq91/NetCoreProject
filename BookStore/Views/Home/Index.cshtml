@@ -1,7 +1,42 @@
-﻿
+﻿@using BookStore.Models
+@model List<BookModel>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Book Store";
+    int i = 0;
 }
 
-<h1>Index</h1>
-
+<div>
+    <a class="btn btn-success" href="/Book/Create">Create</a>
+    <table>
+        <tr>
+            <th width="5%">#</th>
+            <th width="15%">Name</th>
+            <th width="8%">Category</th>
+            <th width="10%">Author</th>
+            <th width="10%">Publisher</th>
+            <th width="20%">Published Date</th>
+            <th width="10%">Description</th>
+            <th width="30%">Action</th>
+        </tr>
+        @foreach (BookModel item in Model)
+        {
+            {
+                i++;
+            }
+            <tr>
+                <td>@i</td>
+                <td>@item.Name</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Author</td>
+                <td>@item.Publisher</td>
+                <td>@item.PublishedDate</td>
+                <td>@item.Description</td>
+                <td>
+                    <a class="btn btn-primary" href="/Book/Detail/@item.Id">Detail</a>
+                    <a class="btn btn-success" href="/Book/Edit/@item.Id">Edit</a>
+                    <a class="btn btn-danger btn-delete" href="/Book/Delete/@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
