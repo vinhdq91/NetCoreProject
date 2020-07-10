@@ -1,0 +1,17 @@
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\AddRedisCacheDemo.exe
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\AddRedisCacheDemo.deps.json
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\AddRedisCacheDemo.runtimeconfig.json
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\AddRedisCacheDemo.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\AddRedisCacheDemo.dll
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\bin\Debug\netcoreapp3.1\AddRedisCacheDemo.pdb
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\staticwebassets\AddRedisCacheDemo.StaticWebAssets.Manifest.cache
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\staticwebassets\AddRedisCacheDemo.StaticWebAssets.xml
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\AddRedisCacheDemo.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\AddRedisCacheDemo.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\AddRedisCacheDemo.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\AddRedisCacheDemo.dll
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\AddRedisCacheDemo.pdb
+C:\Users\Administrator\source\repos\NetCoreProject\AddRedisCacheDemo\obj\Debug\netcoreapp3.1\AddRedisCacheDemo.csprojAssemblyReference.cache

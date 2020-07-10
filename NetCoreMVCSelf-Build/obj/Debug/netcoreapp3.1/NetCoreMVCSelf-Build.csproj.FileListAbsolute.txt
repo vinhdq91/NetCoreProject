@@ -7,7 +7,6 @@ C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\bin\Debu
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\bin\Debug\netcoreapp3.1\NetCoreMVCSelf-Build.runtimeconfig.dev.json
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\bin\Debug\netcoreapp3.1\NetCoreMVCSelf-Build.dll
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\bin\Debug\netcoreapp3.1\NetCoreMVCSelf-Build.pdb
-C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\obj\Debug\netcoreapp3.1\NetCoreMVCSelf-Build.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\obj\Debug\netcoreapp3.1\staticwebassets\NetCoreMVCSelf-Build.StaticWebAssets.Manifest.cache
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\obj\Debug\netcoreapp3.1\staticwebassets\NetCoreMVCSelf-Build.StaticWebAssets.xml
 C:\Users\Administrator\source\repos\NetCoreProject\NetCoreMVCSelf-Build\obj\Debug\netcoreapp3.1\NetCoreMVCSelf-Build.AssemblyInfoInputs.cache
